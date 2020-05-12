@@ -2,6 +2,9 @@ import React from "react";
 import Chart from "./Chart";
 
 const Charts = ({ coinData }) => {
+
+  if(!coinData) return <h2>"Loading Coin Charts..."</h2>;
+
   return (
     <div className="charts">
       {coinData.map(coin => (
